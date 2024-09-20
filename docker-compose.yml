@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3'
+services:
+  python-server:
+    build: .
+    ports:
+      - "8000:8000"  # Maps the container port 8000 to host port 8000
+    volumes:
+      - .:/app  # Mounts the current directory to /app in the container
+    environment:
+      - PYTHONUNBUFFERED=1
