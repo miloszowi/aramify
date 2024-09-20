@@ -55,7 +55,7 @@ class Server(BaseHTTPRequestHandler):
         self.send_response_with_content(400, error_content)
 
 
-def run(server_class=HTTPServer, handler_class=Server, port=8000):
+def run(server_class=HTTPServer, handler_class=Server, port=8111):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f"Starting HTTP server on port {port}...")
